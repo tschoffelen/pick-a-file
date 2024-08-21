@@ -1,0 +1,25 @@
+{
+  "name": "pick-file",
+  "version": "1.0.0",
+  "description": "A simple utility for presenting the browser file picker.",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tschoffelen/pick-file.git"
+  },
+  "keywords": [
+    "file-picker",
+    "browser",
+    "file-input"
+  ],
+  "author": "Thomas Schoffelen <thomas@schof.co>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tschoffelen/pick-file/issues"
+  },
+  "homepage": "https://github.com/tschoffelen/pick-file#readme"
+}
