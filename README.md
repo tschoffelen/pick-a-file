@@ -1,4 +1,4 @@
-# Pick file
+# Pick a file
 
 **Ask the user to pick a file, get a promise with a [`File`](https://developer.mozilla.org/en-US/docs/Web/API/File) back.**
 
@@ -8,11 +8,13 @@ thought I'd just make it easy for myself to access it.
 
 ## Installation
 
-Run `yarn add pick-file`, or `npm i pick-file` if you insist.
+Run `yarn add pick-a-file`, or `npm i pick-a-file` if you insist.
 
 ## Usage
 
 ```js
+import pickFile from 'pick-a-file';
+
 const file = await pickFile({
   accept: ".csv",
 });

@@ -1,5 +1,5 @@
 {
-  "name": "pick-file",
+  "name": "pick-a-file",
   "version": "1.0.0",
   "description": "A simple utility for presenting the browser file picker.",
   "main": "src/index.js",
