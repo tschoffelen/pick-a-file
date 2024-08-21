@@ -1,8 +1,16 @@
 export type PickFileOptions = {
-  multiple?: boolean;
   accept?: string;
 };
 
-export type PickFileResult = File | FileList | null;
+interface SingleFileOptions extends PickFileOptions {
+  multiple?: false;
+}
 
-export function pickFile(options?: PickFileOptions): Promise<PickFileResult>;
+interface MultiFileOptions extends PickFileOptions {
+  multiple: true;
+}
+
+function pickFile(options?: SingleFileOptions): Promise<File | null>;
+function pickFile(options?: MultiFileOptions): Promise<FileList | null>;
+
+export default pickFile;

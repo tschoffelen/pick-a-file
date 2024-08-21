@@ -10,19 +10,26 @@
  * @param {PickFileOptions} options
  * @returns {Promise<File|FileList|null>}
  */
-const pickFile = ({ multiple = false, accept = "" }) => {
+const pickFile = ({ multiple = false, accept = "" } = {}) => {
   return new Promise((resolve) => {
     const input = document.createElement("input");
     input.type = "file";
     input.accept = accept;
-    input.onchange = (e) => {
-      if (multiple) {
-        return resolve(input.files);
+    input.style.display = "none";
+    input.onchange = () => {
+      /** @type {File|FileList|null} */
+      let result = input.files;
+      if (!multiple) {
+        result = (input.files && input.files[0]) || null;
       }
-      return resolve((input.files && input.files[0]) || null);
+
+      document.body.removeChild(input);
+
+      return resolve(result);
     };
+    document.body.appendChild(input);
     input.click();
   });
 };
 
-module.exports = pickFile;
+export default pickFile;
