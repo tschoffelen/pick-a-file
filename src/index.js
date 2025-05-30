@@ -16,6 +16,7 @@ const pickFile = ({ multiple = false, accept = "" } = {}) => {
     input.type = "file";
     input.accept = accept;
     input.style.display = "none";
+    input.multiple = multiple;
     input.onchange = () => {
       /** @type {File|FileList|null} */
       let result = input.files;
